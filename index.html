@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * {box-sizing: border-box;}
+
+
+
+    h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+img{ border:none;}
+
+
+h1{
+	
+	font-size: 36px;
+	font-weight:normal;
+}
+
+
+h2 {
+    border-bottom: 1px solid #DDDDDD;
+	font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+	margin-top:15px;
+	
+}
+h3{
+    clear: both;
+    
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    padding-top: 10px;
+	
+}
+
+
+
+
+
+article, header, section, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+a{
+	font-family: "Raleway",sans-serif;
+	text-decoration: none;
+	outline: none;
+}
+a:hover, a:focus {
+	color: #373e18;
+}
+section {
+    float: left;
+    width: 100%;
+	 margin-top:3em;
+	 margin-bottom:2em;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  .rt-container {
+    width: 750px;
+  }
+  [class^="col-rt-"] {
+    float: left;
+    width: 49.9999999999%;
+  }
+  .col-rt-6, .col-rt-12 {
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+	.rt-container {
+		width: 1170px;
+	}
+	.col-rt-1 {
+		width:16.6%;
+	}
+	.col-rt-2 {
+		width:30.33%;
+	}
+	.col-rt-3 {
+		width:50%;
+	}
+	.col-rt-4 {
+		width: 67.664%;
+	}
+	.col-rt-5 {
+		width: 83.33%;
+	}
+	
+
+}
+
+
+
+body {
+  margin: 0;
+  background:#242524;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #1095e8;
+  color: white;
+}
+
+.topnav .search-container {
+    float: right;
+  }
+  
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    background: #5f5959;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+
+  
+  .topnav .search-container button:hover {
+    background: #7e7777;
+  }
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+        float: none;
+      }
+  .topnav a, .topnav input[type=text],.topnav .search-container button{
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #dacece;
+}
+.container a:hover {
+    background-color: #ddd;
+    color: #dacece;
+  }
+  
+  .container a.active {
+    background-color: #242ad2;
+    color: white;
+  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1095e8;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: rgb(55, 45, 61);
+}
+
+article {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #dacece;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ddd;
+  }
+  
+  .journalist-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .journalist-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .journalist-info p {
+    margin-left: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .date {
+    margin-left: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  p {
+    padding: 0;
+}
+
+  nav a {
+    text-decoration: none;
+    color: #1095e8;
+    font-weight: bold;
+  }
+  
+  article {
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  
+  .GMA-image {
+    display: block;
+    margin: 0 auto;
+    width: 740;
+    height: 460;
+  }
+  
+.stats-image {
+  display: block;
+  margin: 0 auto;
+  width: 640;
+  height: 360;
+}
+
+.GMAGTV-image {
+  display: block;
+  margin: 0 auto;
+  width: 640;
+  height: 360;
+}
+
+.building-image {
+  display: block;
+  margin: 0 auto;
+  width: 640;
+  height: 360;
+}
+
+.Gozon-image {
+  display: block;
+  margin: 0 auto;
+  width: 713;
+  height: 713;
+}
+
+.abscbn-image {
+  display: block;
+  margin: 0 auto;
+  width: 640;
+  height: 360;
+}
+
+.reference{
+  text-align: hanging;
+}
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 36px;
+    }
+    
+    .GMA-image {
+      width: 100%;
+    }
+    .annie-image2 {
+        width: 100%;
+      }
+  }
+
+</style>
+    <title>GMA-7 Monopoly a Threat </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home" >Home</a>
+        <a href="#news" >News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about" >About</a>
+        <input type="text" placeholder="Search.." name="search">
+      </div>
+    <div class="container">
+        <header>
+            <h1>GMA-7 Monopoly a Threat</h1>
+            <div class="journalist-info">
+                <img src="https://t3.ftcdn.net/jpg/00/64/67/80/360_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg" alt="Journalist Avatar">
+                <p>John Gabriel Gemzon & Jon Francis Fitero </p>
+                <p class="date">| March 30, 2023</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a style="color:#1095e8" href="#">News</a></li>
+                    <li><a style="color:#1095e8" href="#">Celebrities</a></li>
+                    <li><a style="color:#1095e8" href="#">Sports</a></li>
+                    <li><a style="color:#1095e8" href="#">Anime</a></li>
+                    <li><a style="color:#1095e8" href="#">Music</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <p style="border: 1px solid hsl(7, 6%, 71%); margin-bottom:10 px;"></p>
+            <img src="https://cibersistemas.pt/wp-content/uploads/2022/04/GMA-TV-1140x760.jpg" alt="GMA" width="740" height="460" class="GMA-image">
+            <p style="border: 1px solid hsl(7, 6%, 71%); margin-bottom:10 px;"></p>
+            
+            <p style="color:whitesmoke;text-indent: 50px;">GMA-7 is a major threat to Philippine democracy. As they stand as the number one media broadcasting network in the Philippines as of 2022. They achieved this title after the shutdown of the well-renowned broadcasting network known as ABS-CBN corp. With the effects of this shutdown, their initial total income from 2022 which was P7.57 billion gained about P2 billion because of the 8.3 percent increase in their sales. This summed up to a total of P8.2 billion as of 2023. </p>
+
+            <img src="https://i.pinimg.com/originals/d0/35/da/d035daa4b63ded41d5a38de151fcc09c.jpg" alt="Chibi Annie" width="640" height="360" class="stats-image">
+            
+            <p style="color:whitesmoke;text-indent: 50px">This is vital information because it shows how GMA-7 is a rising monopoly and with that, it shows how they are being the most trusted source of news and entertainment. People grew more attached to their network because of the loss of ABS-CBN Corp. Following that the CEO and chairman of GMA-7, Felipe Gozon addressed that they are optimistic that they will be earning more as of 2023 and that the initial plans of rise in their net worth are seen to be on track, as said in a stockholder meeting last June 2022 (Mercurio, 2022). </p>
+         </p>
+
+         <h3 style="color: whitesmoke"><b>Monopolizing Broadcast</b></h3>
+         <p style="color:whitesmoke;text-indent: 50px"> Data says that GMA-7 has shown in recent reports from 2022 that the rise of viewership expanded its audience while further solidifying its control over online platforms. The reports showed that from January to December 2022 the combined people net reach of GMA Network, including GTV and its other digital channels, was 96%, or 78 million viewers nationwide in the Philippines. It also showed the rise of viewership in its radio stations wherein its AM radio gained 37.4% of the total audience and its FM radio gained 38.5% total audience in the year 2022. Overall GMA had a total viewer share of 42.7 percent, making it the most-watched channel in the year 2022.</p>
+        </article>
+
+        <article>
+          <img src="https://contents.pep.ph/images2/images2/2021/02/10/gma-news-tv-gtv-1612942910.jpg" alt="GMA + GTV" width="640" height="360" class="GMAGTV-image">
+<p style="color:whitesmoke;text-indent: 50px">In addition, GMA-7 proclaims that they are not a monopoly and that other TV and radio stations are popular enough that are their so-called competitors. Gozon stated it is true that GMA and GTV stand as the number one and number two broadcasting stations in the Philippines in terms of revenue and ratings, but this is due to GMA providing and airing viewers content that they are fond of and because of this they are potentially watched more than their other competitors. Hence, the advertisers focus on placing their ads in the programs that GMA airs because the programs there rate higher than their competitors. </p>
+     
+</article>
+
+<article>
+  <img src ="https://www.adobomagazine.com/wp-content/uploads/2021/05/GMA-Network-announces-promotion-of-executives-HERO2.jpg" width="640" height="360" class="building-image">
+  <p style="color:whitesmoke;text-indent: 50px"> I believe with the rise in viewership and the advertisers using them as a source of exposure, can lead to their capital growing more and benefiting them a lot. As they become more and more fond of the viewers and with that advertisers begin flooding in because they are aware that this network can provide them with a lot of customers for their product. Furthermore, it only seems that they proclaim that they have other competitors as a means of being passive and opposing no threats to the industry, but it is nothing more than a façade that only leads people that are not aware of the bigger situation to trust their words and promote viewership of their channel. </p>
+
+</article>
+
+
+<article>
+  <h3>Prevarication to Success</h3>
+  <img src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t1.6435-9/129751388_10157303625292000_8153888730847981359_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeEib7oBdjTU0UQp4om_ubxr7f6Sgnu8VBPt_pKCe7xUE1YN2lhqL6pudma49QCWAxmcAVJz8GpYRLOueTGqvIv0&_nc_ohc=xJDDOikcQiUAX8kew19&_nc_ht=scontent.fmnl25-1.fna&oh=00_AfDY8CsGhaug1T_7dFj4xjcmKF7q0Z5YxvE5VcBDObRaPA&oe=644C2499" alt="GMA" width="713" height="713" class="Gozon-image">            
+  <p style="color:whitesmoke;text-indent: 50px">I think the CEO is well aware that their viewership and income will only rise in the next following years. This also paves the way for them to have a bigger monopoly inside our country. So why is this information relevant? It stands that GMA-7 is the preferred outlet of news and information which the mass digests. This can cause a total bias to one's platform and create a barrier that separates what the mass needs to know and what they are provided by the network itself. With that, this only means that due to GMA-7 being a large source of news they have the power to manipulate what gets out in the media and this only helps them grow because it revolves around money. So how does it work? We know that GMA-7 is comprised of multiple companies and that they revolve around one another. Let’s say one scandal arose from one of their companies, they would not scatter information or even broadcast a single bit of information to the public because they want to keep themselves clean. Doing that helps them keep their name clean and keep the trust the people give them. </p>
+  </p>
+</article>
+
+
+<article>
+<h3 style="color: whitesmoke"><b>Enemies to Friends</b></h3>
+<p style="color:whitesmoke;text-indent: 50px"> In 2022 a historic agreement between GMA Network Inc. and ABS-CBN Corp. creates the potential for future collaboration and partnerships between the two competing networks. A contract was made by GMA and ABS-CBN to license some of Star Cinema's most well-known and cherished films for GMA to air. Gilberto Duavit Jr., president, and chief operating officer of GMA Network stated that the alliance is advantageous to both parties and lays the door for potential future partnerships. </p>
+<img src="https://business.inquirer.net/files/2023/01/abs-cbn-gma-filephoto-012423.png"  width="640" height="360" class="abscbn-image">
+<p style="color:whitesmoke;text-indent: 50px">Following that Gozon deems to be open to entering more companies or partnerships that are owned by the Lopez. Stating that since the ice between both parties has melted the door for more partnerships has been opened to them. Hence being mutually beneficial for both parties. This is a major step for both networks as one stands to be on top and the other acts as a major support to its success and yet this majorly boost its franchise.</p>
+<p style="color:whitesmoke;text-indent: 50px">In addition to all of this, their partnership is more of building a trust bond with both parties and having their scapegoat once an issue surfaces in the media. With their partnership creating multiple opportunities for many talents, it also creates more issues that get buried and only the glittering personalities are recognized or noticed.  </p>
+</article>
+
+<article>
+  <h3 style="color:whitesmoke">The Real Threat to Democracy</h3>
+  <p style="color:whitesmoke;text-indent: 50px">In conclusion, GMA-7 stands as a threat to democracy as it is monopolizing broadcasting, and by monopolizing it, they create a means of being the trusted source of information. They have the power to manipulate such cases that will hinder and ruin their name and upon building a partnership with the Lopez, their franchise grows to have more talents and a means to gaining more viewership. What will happen to our nation if we follow and trust the ones who are at the top? We become puppets under their control, and it will only lead to ruination. Furthermore, this merely provides viewers with a new perspective and this shows that numbers don’t lie. Their huge margin of viewership creates overwide access to the whole nation, and I will ask you now, do you think GMA-7 monopolizing broadcast is a threat to democracy?
+  </p>
+</article>
+
+<div class="Reference">
+<h2 style="color:whitesmoke; margin-bottom: 35px; text-align: center;"><b>Reference List</b></h2>
+
+  <p style="color:whitesmoke">Mercurio, R. (2022, May 18). <em>GMA sees profit growth this year.</em> Philstar.com.</p><p style= "text-indent: 50px"><a href="https://www.philstar.com/business/2022/05/19/2182055/gma-sees-profit-growth-year"> https://www.philstar.com/business/2022/05/19/2182055/gma-sees-profit-growth-year</a></p>
+  <p style="color:whitesmoke">Press Release & Press Release. (2023, February 10). <em>GMA-7 “most watched channel” in 2022; 28 programs part of Nielsen’s Top 30.</em> PEP.ph.</p> <p style= "text-indent: 50px"> <a href="https://www.pep.ph/guide/tv/171440/gma-most-watched-channel-2022-a4232-20230210">https://www.pep.ph/guide/tv/171440/gma-most-watched-channel-2022-a4232-20230210</a></p>
+  <p style="color:whitesmoke">Piad, T. J. C. (2023, January 24). <em>Plot twist: ABS-CBN, GMA forge ‘historic’ partnership.</em> Inquirer Business.</p> <p style= "text-indent: 50px"><a href="https://business.inquirer.net/383570/plot-twist-abs-cbn-gma-forge-historic-partnership"> https://business.inquirer.net/383570/plot-twist-abs-cbn-gma-forge-historic-partnership</a></p>
+
+</div>
+
+        <footer>
+            <p>&copy; 2023 FG News. All rights reserved.</p>
+        </footer>
+    </div>
+  
+
+
+                </form>
+              </div>
+            </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
